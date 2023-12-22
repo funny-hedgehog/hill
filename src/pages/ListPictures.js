@@ -48,11 +48,8 @@ export default React.memo(
           return (
             <li key={item} style={{listStyle: 'none'}}>
               <img
-                onLoad={(e) => {
-                  console.log(e.target)
-                  setPhotosSize(s => s += 1)
-                }}
-                alt={'image'}
+                onLoad={(e) => setPhotosSize(s => s += 1)}
+                alt='imageYYYYY'
                 src={item}
                 width={600}
               />

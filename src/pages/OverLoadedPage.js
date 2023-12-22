@@ -24,17 +24,18 @@ function OverLoadedPage() {
 
   React.useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(response => {
-        return response.json()
+      .then(response => response.json())
+      .then(json => {
+        // console.log('json', json)
+        setArraySize(s => s += 135)
       })
-      .then(json => setArraySize(s => s += 135))
       .catch((e) => console.log(`Error ${e}`))
-  }, [arraySize]);
+  }, []);
 
   return (
     <div>
       <h1>OverLoadedPage</h1>
-      <h2>Объём загруженного массива - {Math.round(arraySize / 1000)} MB</h2>
+      <h2>Объём загруженного массива - {arraySize} kB</h2>
       <h2>Объём загруженных изображений - {photosSize} штук</h2>
 
       <ListPictures setPhotosSize={setPhotosSize} />
