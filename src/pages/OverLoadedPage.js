@@ -51,7 +51,7 @@ function OverLoadedPage() {
 
       <img
         ref={imgRef}
-        style={{opacity: 0.1}}
+        style={{opacity: 0}}
         alt={url}
         src={map[url]}
         width={600}
