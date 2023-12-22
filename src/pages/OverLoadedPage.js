@@ -1,5 +1,6 @@
 import React from 'react';
 import ListPictures from "./ListPictures";
+import data from './data.json';
 
 function OverLoadedPage() {
   // const [url, setUrl] = React.useState('first')
