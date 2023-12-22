@@ -1,6 +1,6 @@
 import React from 'react';
 import ListPictures from "./ListPictures";
-import data from './data.json';
+import ListArray from "./ListArray";
 
 function OverLoadedPage() {
   // const [url, setUrl] = React.useState('first')
@@ -23,23 +23,23 @@ function OverLoadedPage() {
   // }, [url])
 
 
-  React.useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(response => response.json())
-      .then(json => {
-        // console.log('json', json)
-        setArraySize(s => s += 135)
-      })
-      .catch((e) => console.log(`Error ${e}`))
-  }, []);
+  // React.useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/photos')
+  //     .then(response => response.json())
+  //     .then(json => {
+  //       // console.log('json', json)
+  //       setArraySize(s => s += 135)
+  //     })
+  //     .catch((e) => console.log(`Error ${e}`))
+  // }, []);
 
   return (
     <div>
       <h1>OverLoadedPage</h1>
       <h2>Объём загруженного массива - {arraySize} kB</h2>
       <h2>Объём загруженных изображений - {photosSize} штук</h2>
-
       <ListPictures setPhotosSize={setPhotosSize} />
+      <ListArray />
     </div>
   );
 }
