@@ -11,11 +11,11 @@ import './App.css';
 function App() {
   return (
     <>
-      <header className="links">
-        <Link to="/">Simple1</Link>
-        <Link to="/simple2">Simple2</Link>
-        <Link to="/overloaded">Overloaded</Link>
-      </header>
+      {/*<header className="links">*/}
+      {/*  <Link to="/">Simple1</Link>*/}
+      {/*  <Link to="/simple2">Simple2</Link>*/}
+      {/*  <Link to="/overloaded">Overloaded</Link>*/}
+      {/*</header>*/}
 
       <Switch>
         <Route path="/" component={Simple1Page} exact />
