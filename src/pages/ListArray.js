@@ -5,7 +5,7 @@ import data4 from './data4.json';
 const arr = []
 
 export default React.memo(
-  function ListArray() {
+  function ListArray({setArraySize}) {
     const [product, setProducts] = React.useState([])
     const timer = React.useRef()
 
@@ -43,6 +43,13 @@ export default React.memo(
         'yyyy': uuidv4(),
         'zzzz': uuidv4(),
       }
+      let i = 0;
+      setTimeout(() => console.log(i), 100); // 100000000
+      for(let j = 0; j < 1000000000; j++) {
+        i++;
+      }
+
+      setArraySize(s => s += 1)
       setProducts((prev) => [...prev, newItem])
     }
 
