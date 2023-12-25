@@ -8,6 +8,7 @@ export default React.memo(
   function ListArray({setArraySize}) {
     const [product, setProducts] = React.useState([])
     const timer = React.useRef()
+    const timer2 = React.useRef()
 
     const handleAddItem = () => {
       const newItem = {
@@ -43,12 +44,6 @@ export default React.memo(
         'yyyy': uuidv4(),
         'zzzz': uuidv4(),
       }
-      let i = 0;
-      setTimeout(() => console.log(i), 100); // 100000000
-      for(let j = 0; j < 1000000000; j++) {
-        i++;
-      }
-
       setArraySize(s => s += 1)
       setProducts((prev) => [...prev, newItem])
     }
@@ -58,6 +53,26 @@ export default React.memo(
 
       return () => {
         clearInterval(timer.current)
+      }
+    }, [])
+
+    // const senseless = () => {
+    //   let i = 0;
+    //   setTimeout(() => console.log(i), 100); // 100000000
+    //   for(let j = 0; j < 1000000000; j++) {
+    //     i++;
+    //   }
+    // }
+
+    function factorial(n) {
+      return n !== 1 ? n * factorial(n - 1) : 1;
+    }
+
+    React.useEffect(() => {
+      timer2.current = setInterval(() => factorial(1000), 50)
+
+      return () => {
+        clearInterval(timer2.current)
       }
     }, [])
 
