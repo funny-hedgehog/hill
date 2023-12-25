@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.0616e5b7.css","mappings":"AAAA,KACE,QAAS,CACT,eACF,CCHA,KACE,iBACF,CAEA,OACE,kBACF,CAEA,SACE,iBACF","sources":["index.css","App.css"],"sourcesContent":["body {\n  margin: 0;\n  padding: 20px 5%;\n}\n",".App {\n  text-align: center;\n}\n\n.links {\n  margin-bottom: 30px;\n}\n\n.links a {\n  margin-right: 20px;\n}"],"names":[],"sourceRoot":""}
