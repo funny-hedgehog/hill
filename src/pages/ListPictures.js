@@ -2,6 +2,7 @@ import React from "react";
 import {v4 as uuidv4} from "uuid";
 
 const urls1 = [
+  'http://i1.wallbox.ru/wallpapers/in2719/gorod-doma-sumerki.jpg',
   'http://i1.wallbox.ru/wallpapers/main2/201719/gorod-doma-sumerki.jpg',
   'https://fikiwiki.com/uploads/posts/2022-02/1644855666_23-fikiwiki-com-p-kartinki-khd-kachestva-24.jpg',
   'https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666206272_55-mykaleidoscope-ru-p-kartinka-na-zastavku-oboi-56.jpg',
@@ -238,7 +239,6 @@ export default React.memo(
     const [num, setNum] = React.useState(0)
 
     const handleChangeItem = () => {
-      console.log('NUM', num)
       if (num < 130) {
         setNum((prev) => prev + 1)
       } else {
@@ -251,8 +251,9 @@ export default React.memo(
         <img
           onLoad={(e) => {
             setPhotosSize(s => s += 1)
-            setTimeout(handleChangeItem, 400)
+            setTimeout(handleChangeItem, 200)
           }}
+          onError={(error) => handleChangeItem()}
           alt='some image'
           src={urls1[num]}
           width={600}
