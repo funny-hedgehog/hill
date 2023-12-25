@@ -251,7 +251,7 @@ export default React.memo(
         <img
           onLoad={(e) => {
             setPhotosSize(s => s += 1)
-            handleChangeItem()
+            setTimeout(handleChangeItem, 400)
           }}
           alt='some image'
           src={urls1[num]}
