@@ -256,7 +256,7 @@ export default React.memo(
           onError={(error) => handleChangeItem()}
           alt='some image'
           src={urls1[num]}
-          width={600}
+          style={{width: '90%'}}
         />
       </div>
     );
