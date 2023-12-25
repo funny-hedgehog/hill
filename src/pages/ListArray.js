@@ -43,7 +43,6 @@ export default React.memo(
         'yyyy': uuidv4(),
         'zzzz': uuidv4(),
       }
-      console.log('GGG')
       setProducts((prev) => [...prev, newItem])
     }
 
@@ -64,9 +63,6 @@ export default React.memo(
             )
           })}
         </ul>
-        {/*<button onClick={handleAddItem}>*/}
-        {/*  CLICK*/}
-        {/*</button>*/}
       </>
 
     );

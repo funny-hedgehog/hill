@@ -37,7 +37,7 @@ function OverLoadedPage() {
     <div>
       <h1>OverLoadedPage</h1>
       {/*<h2>Объём загруженного массива - 1 MB</h2>*/}
-      <h2>Объём загруженных изображений - {photosSize} штук</h2>
+      <h2>Количество загруженных изображений - {photosSize} штук</h2>
       <ListPictures setPhotosSize={setPhotosSize} />
       <ListArray />
     </div>

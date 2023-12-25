@@ -1,4 +1,5 @@
 import React from "react";
+import {v4 as uuidv4} from "uuid";
 
 const urls1 = [
   'http://i1.wallbox.ru/wallpapers/main2/201719/gorod-doma-sumerki.jpg',
@@ -37,14 +38,14 @@ const urls1 = [
   'https://photographylife.com/wp-content/uploads/2018/07/caPatchStart-1536x1103.jpg',
   'https://bugaga.ru/uploads/posts/2009-09/1251815154_01_09_2009_08628_philippe-sainte-laudy-6.jpg',
   'https://images.squarespace-cdn.com/content/v1/55c3df7ce4b0abe10a7ec1b9/1516168947908-K4NVIAE5KQDLFV10WAFQ/DJI_0140+-+Copy.jpg',
-  'http://vsegda-pomnim.com/uploads/posts/2022-03/1647654770_66-vsegda-pomnim-com-p-gora-kostsyushko-foto-71.jpg',
+  'http://vsegda-pomnim.com/uploads/posts/2022-03/1647654770_66-vsegda-pomnim-com-p-gora-kostsyushko-foto-71.jpg', // 35
 
   'https://sportishka.com/uploads/posts/2022-11/1667504980_37-sportishka-com-p-zamki-v-gorakh-oboi-39.jpg',
   'https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663221613_27-mykaleidoscope-ru-p-zamki-srednevekovya-oboi-27.jpg',
   'https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663399594_40-mykaleidoscope-ru-p-zamok-v-bavarii-noishvanshtain-oboi-44.jpg',
   'https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663242816_43-mykaleidoscope-ru-p-starinnie-zamki-vkontakte-46.jpg',
   'https://s2.best-wallpaper.net/wallpaper/2880x1800/2111/Vajdahunyad-Castle-Hungary-Budapest-green-trees-pond_2880x1800.jpg',
-  'https://dreempics.com/uploads/posts/2018-03/1520166569_zamok-2.jpg',
+  'https://dreempics.com/uploads/posts/2018-03/1520166569_zamok-2.jpg', // 40
   'https://fikiwiki.com/uploads/posts/2022-02/1644927707_46-fikiwiki-com-p-krasivie-kartinki-zamki-55.jpg',
   'https://fikiwiki.com/uploads/posts/2022-02/1644927657_8-fikiwiki-com-p-krasivie-kartinki-zamki-8.jpg',
   'https://i.pinimg.com/originals/4e/46/d0/4e46d0e0943f63b15a0f0f343679c9e3.jpg',
@@ -115,8 +116,7 @@ const urls1 = [
   'https://u.9111s.ru/uploads/202201/15/0710a76cedfb09f2a72703bc384e9199.jpg',
   'https://img.goodfon.ru/original/1920x1080/1/18/frantsiia-osen-zamok-missiiak.jpg',
   'https://w.forfun.com/fetch/59/591afede5ccecc41dc4f99bb7076430f.jpeg',
-  'https://w.forfun.com/fetch/4d/4d47c3e73a56f96dce4743bce06a2d88.jpeg',
-
+  'https://w.forfun.com/fetch/4d/4d47c3e73a56f96dce4743bce06a2d88.jpeg', // 70
   'https://w.forfun.com/fetch/a2/a2d0571178a1a205aac1139e100ed1a8.jpeg',
   'https://fikiwiki.com/uploads/posts/2022-02/1644860165_2-fikiwiki-com-p-kartinki-krasivikh-gor-3.jpg',
   'https://catherineasquithgallery.com/uploads/posts/2021-03/1614636714_7-p-fon-gori-dlya-fotoshopa-10.jpg',
@@ -128,7 +128,6 @@ const urls1 = [
   'https://w-dog.ru/wallpapers/10/2/495566523171216/ozero-gory-oblaka.jpg',
   'https://fikiwiki.com/uploads/posts/2022-02/1644918679_26-fikiwiki-com-p-krasivie-kartinki-visokogo-razresheniya-30.jpg',
   'https://2.bp.blogspot.com/-aRGdQktz6ck/XFcxe-c3o9I/AAAAAAAACCQ/J97a-e3zXL4A1jmTNc7g-xbSHk8WPOYsACKgBGAs/w3840-h2400-p-k-no-nu/mountain-clouds-landscape-scenery-65-4K.jpg',
-
   'https://top-fon.com/uploads/posts/2023-01/1674966530_top-fon-com-p-fon-dlya-prezentatsii-priroda-gori-206.jpg',
   'https://klike.net/uploads/posts/2022-09/1662088411_j-2.jpg',
   'https://w.forfun.com/fetch/04/04090cda03b9bcc625fa7464c954c993.jpeg',
@@ -140,7 +139,6 @@ const urls1 = [
   'https://fikiwiki.com/uploads/posts/2022-02/1644860147_13-fikiwiki-com-p-kartinki-krasivikh-gor-18.jpg',
   'https://sportishka.com/uploads/posts/2022-11/1667498610_30-sportishka-com-p-annamskie-gori-oboi-39.jpg',
   'https://w.forfun.com/fetch/3b/3b42d756b4d646dad750fb39d2464a6a.jpeg',
-
   'https://w.forfun.com/fetch/d4/d4b2e2a0f31432097564c3e02d3cd661.jpeg',
   'https://w.forfun.com/fetch/b0/b0779cf7658be72dc7ba53108e55ebef.jpeg',
   'https://w.forfun.com/fetch/4f/4fe850574d353d4a18e378891be8fff0.jpeg',
@@ -152,7 +150,6 @@ const urls1 = [
   'https://w.forfun.com/fetch/1a/1a63276c52f1d9c08b048d6d5ff5c9b5.jpeg',
   'https://proprikol.ru/wp-content/uploads/2020/04/krasivye-kartinki-vysokogo-razresheniya-30.jpg',
   'https://w.forfun.com/fetch/58/58328e3c0fe324b77a83b33dec2853c6.jpeg',
-
   'https://wp-s.ru/wallpapers/10/10/427582456501650/krasivaya-gornaya-mestnost-s-ozerom.jpg',
   'https://www.zastavki.com/pictures/originals/2020Nature___Rivers_and_lakes_Fast_mountain_river_against_the_background_of_mountains_in_the_forest_145416_.jpg',
   'https://s1.1zoom.me/big3/595/412128-svetik.jpg',
@@ -164,7 +161,6 @@ const urls1 = [
   'https://w-dog.ru/wallpapers/2/98/399366588096332/zelen-les-bereg-voda-nebo-sneg-gory.jpg',
   'https://w.forfun.com/fetch/36/36b261d11b5bb163fdbed3f47740092a.jpeg',
   'https://wp-s.ru/wallpapers/9/8/549551266186127/priroda-s-gorami-zakatom-na-ozere.jpg',
-
   'https://c.wallhere.com/photos/a3/43/mountains_high_snow-988481.jpg!d',
   'https://vsegda-pomnim.com/uploads/posts/2022-03/1647455066_11-vsegda-pomnim-com-p-ozero-gornoe-foto-13.jpg',
   'https://wp-s.ru/wallpapers/9/12/492974514481499/krasivoe-izobrazhenie-gor-v-italii.jpg',
@@ -176,8 +172,6 @@ const urls1 = [
   'https://w.forfun.com/fetch/be/be111262a288616a763666a9a95bfe98.jpeg',
   'https://images.wallpaperscraft.ru/image/single/gory_ozero_fotoshop_116723_2560x1600.jpg',
   'https://w.forfun.com/fetch/75/75e67e6c946bcadca001cf8dc1f247d3.jpeg',
-  ///////////
-
   'https://w.forfun.com/fetch/97/97d92b1963479db08b8bbe336e4c6488.jpeg?w=1470&r=0.5625',
   'https://w.forfun.com/fetch/a6/a6af804668e3faeb2c365007d170835f.jpeg?w=1470&r=0.5625',
   'https://w.forfun.com/fetch/95/95a2e631bd6720f13c0426804d985e6b.jpeg?w=1470&r=0.5625',
@@ -241,24 +235,49 @@ const urls1 = [
 
 export default React.memo(
   function ListPictures({setPhotosSize}) {
+    const [num, setNum] = React.useState(0)
+
+    const handleChangeItem = () => {
+      console.log('NUM', num)
+      if (num < 130) {
+        setNum((prev) => prev + 1)
+      } else {
+        setNum(0)
+      }
+    }
+
     return (
-      <ul>
-        {urls1.map(item => {
-          return (
-            <li key={item} style={{listStyle: 'none'}}>
-              <img
-                onLoad={(e) => setPhotosSize(s => s += 1)}
-                alt='imageYYYYY'
-                src={item}
-                width={600}
-              />
-            </li>
-          )
-        })}
-      </ul>
+      <div>
+        <img
+          onLoad={(e) => {
+            setPhotosSize(s => s += 1)
+            handleChangeItem()
+          }}
+          alt='some image'
+          src={urls1[num]}
+          width={600}
+        />
+      </div>
     );
   },
   (prevProps, nextPropx) => {
     return true;
   },
 );
+
+/*
+<ul>
+  {urls1.map(item => {
+    return (
+      <li key={item} style={{listStyle: 'none'}}>
+        <img
+          onLoad={(e) => setPhotosSize(s => s += 1)}
+          alt='imageYYYYY'
+          src={item}
+          width={600}
+        />
+      </li>
+    )
+  })}
+</ul>
+ */
